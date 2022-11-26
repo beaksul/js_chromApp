@@ -1,3 +1,160 @@
+*{margin: 0; padding: 0;}
+
 .hidden{
   display: none;
+}
+
+body,html{
+  width: 100%;
+  height: 100%;
+}
+
+h1,h2,span, li{
+  color: #fff;
+}
+
+img{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#flex{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.left, .right{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#clock{
+  font-size: 7vw;
+}
+
+#login-form{
+  padding: 20px 0;
+}
+
+#login-input{
+  width: 30vw;
+  color: #fff;
+  background-color: rgba(51, 68, 51, 0);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 2vw;
+  border: 0;
+  border-bottom: 2px solid #fff;
+}
+
+input::placeholder { color: #fff; }
+input:focus{
+	outline: none;
+}
+
+#login-btn{
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2vw;
+  display: none;
+}
+
+#greeting{
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 2vw;
+}
+
+#login-btn:hover{
+  background-color: #fff;
+  transition: .2s;
+  color: #000;
+}
+
+#quote span:first-child::after{
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+}
+
+#quote span:first-child{
+  position: relative;
+  padding-top: 30px;
+}
+
+#quote span{
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.right .top, .bottom{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#weather{
+
+}
+
+#todo-form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#todo-input{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  padding: 10px 0;
+  font-size: 1.5vw;
+  color: #fff;
+  text-align: center;
+  width: 60%;
+}
+
+#todo-list{
+
+}
+
+li{
+  padding: 7px 0;
+}
+
+li button{
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+li button:hover{
+  color: rgba(255, 255, 255, 0.459);
 }

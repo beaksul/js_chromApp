@@ -7,7 +7,7 @@ function getClock(){
   const seconds = String(date.getSeconds()).padStart(2, '0');
   // 숫자에는 padStart를 쓸 수 없음
 
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+  clock.innerText = `${hours}:${minutes}`;
 }
 
 getClock();
