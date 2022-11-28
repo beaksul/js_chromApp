@@ -8,6 +8,9 @@ body,html{
   width: 100%;
   height: 100%;
 }
+html{
+  font-size: 62.5%;
+}
 
 h1,h2,span, li{
   color: #fff;
@@ -39,7 +42,7 @@ img{
 }
 
 #clock{
-  font-size: 7vw;
+  font-size: 13rem;
 }
 
 #login-form{
@@ -47,14 +50,18 @@ img{
 }
 
 #login-input{
-  width: 30vw;
+  width: 18vw;
+  min-width: 125px;
   color: #fff;
-  background-color: rgba(51, 68, 51, 0);
+  background-color: rgba(255, 255, 255, 0);
   text-align: center;
   padding: 10px 0;
-  font-size: 2vw;
   border: 0;
   border-bottom: 2px solid #fff;
+}
+
+#login-input,#greeting{
+  font-size: 3.5rem;
 }
 
 input::placeholder { color: #fff; }
@@ -77,7 +84,6 @@ input:focus{
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  font-size: 2vw;
 }
 
 #login-btn:hover{
@@ -106,6 +112,7 @@ input:focus{
   display: block;
   text-align: center;
   padding: 5px 0;
+  font-size: 1.6rem;
 }
 
 .right .top, .bottom{
@@ -119,7 +126,17 @@ input:focus{
 }
 
 #weather{
+  font-size: 2rem;
+}
 
+#weather span{
+  display: block;
+}
+
+#weather .city{
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 0 0 10px 0;
 }
 
 #todo-form{
@@ -132,19 +149,22 @@ input:focus{
 #todo-input{
   background-color: rgba(255, 255, 255, 0);
   border: 0;
+  border-bottom: 2px solid #fff;
   padding: 10px 0;
-  font-size: 1.5vw;
+  font-size: 3rem;
   color: #fff;
   text-align: center;
-  width: 60%;
-}
-
-#todo-list{
-
+  width: 50%;
+  font-weight: bold;
+  min-width: 180px;
 }
 
 li{
   padding: 7px 0;
+}
+
+li span{
+  font-size: 1.8rem;
 }
 
 li button{
@@ -157,4 +177,16 @@ li button{
 
 li button:hover{
   color: rgba(255, 255, 255, 0.459);
+}
+
+@media screen and (max-width: 768px) {
+  html{
+    font-size: 1px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html{
+    font-size: 4px;
+  }
 }

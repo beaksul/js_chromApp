@@ -6,11 +6,14 @@ function onGeoOk(position){
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}&units=metric`;
   fetch(url)
   .then((response) => response.json())
-  .then((data) => {
-    const weather = document.querySelector("#weather span:first-child");
-    const city = document.querySelector("#weather span:first-child");
-    city.innerText = data.name;
-    weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+  .then((data) => { // api에서 가져온 정보를 사용할 수 있게 data로 넘김
+    // const weather = document.querySelector("#weather span:first-child");
+    // const city = document.querySelector("#weather span:first-child");
+    // city.innerText = data.name;
+    // weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+    const {name} = data;
+    document.querySelector(".city").innerText = name;
+    document.querySelector(".temp").innerText = "현재 기온 : " + Math.floor(data.main.temp) + "℃";
   });
 }
 
